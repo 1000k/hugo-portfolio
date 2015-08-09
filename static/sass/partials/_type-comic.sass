@@ -1,0 +1,39 @@
+// ----------------
+// variables
+// ----------------
+
+
+// ----------------
+// breakpoints
+// ----------------
+
+
+
+// ----------------
+// styles
+// ----------------
+#main[class="comic"]
+  +table-centre-parent
+
+  article
+    +table-centre-child
+
+  nav
+    +leader(1)
+    text-align: center
+    font-size: 4rem
+    a
+      text-decoration: none
+      color: $color-primary-4
+    a:hover, a:active
+      color: $color-primary-2
+
+  figure
+    +trailer(2)
+
+  .yonkoma
+    h3
+      font-size: 2rem
+      font-weight: 600
+      +leader(1)
+      +trailer(1)

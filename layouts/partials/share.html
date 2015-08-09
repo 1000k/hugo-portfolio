@@ -1,0 +1,10 @@
+{{ $url := .Permalink }}
+{{ $encodedBaseUrl := .Site.BaseURL | html }}
+{{ $encodedUrl := .Permalink | html }}
+<footer class="share-buttons">
+  <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ .Title }}&amp;url={{ $encodedUrl }}&amp;via=muratagawa" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedUrl }}" target="_blank"><i class="fa fa-facebook"></i></a>
+  <a class="share-gplus" href="https://plus.google.com/share?url={{ .Permalink | html }}&amp;hl=ja" target="_blank"><i class="fa fa-google-plus"></i></a>
+  <a class="share-tumblr" href="http://www.tumblr.com/share/link?url={{ $url }}&amp;name={{ .Title }}&amp;description=%E6%9D%91%E7%94%B0%E5%B7%9D%E5%85%88%E7%94%9F%E3%81%AE%E4%BD%9C%E5%93%81%E3%81%8C%E8%AA%AD%E3%82%81%E3%82%8B%E3%81%AE%E3%81%AF%E3%81%8A%E5%89%8D%E3%81%A0%E3%81%91%EF%BC%81" target="_blank"><i class="fa fa-tumblr"></i></a>
+  <a class="share-pinterest" href="https://pinterest.com/pin/create/bookmarklet/?url={{ $url }}&amp;description={{ .Title }}{{ with .Params.share }}&amp;media={{ $encodedBaseUrl }}img%2f{{ . }}{{ end }}" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+</footer>

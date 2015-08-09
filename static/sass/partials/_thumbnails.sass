@@ -1,0 +1,94 @@
+// ----------------
+// variables
+// ----------------
+$anime-duration: .3s
+
+// ----------------
+// breakpoints
+// ----------------
+.thumbnails
+  h2
+    font-size: 3rem
+    line-height: 3rem
+    flex-basis: 50%
+
+  figure
+    flex: 1 1 25%  // even `0 1 25%` will fit your demand
+
+    +breakpoint($breakpoint-mobile)
+      flex-basis: 50%
+
+
+// ----------------
+// styles
+// ----------------
+.thumbnails
+  display: flex
+  flex-flow: row
+  flex-wrap: wrap
+
+  h2
+    background: $color-secondary-2-4
+    color: #fff
+    display: flex
+    +flex-centre
+
+  figure
+    overflow: hidden
+    position: relative
+
+    box-sizing: border-box
+    height: 12rem
+    background: #888
+
+    img
+      // fill image inside box
+      width: 100%
+      height: 12rem
+      object-position: 50% 50%
+      object-fit: cover
+      z-index: 1
+
+    figcaption
+      color: #fff
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      padding: 1rem
+      +transform(translateY(100%))
+      +transition(transform $anime-duration ease-in-out)
+
+      h3
+        font-size: 1.5rem
+
+      a
+        color: #fff
+        text-decoration: none
+        display: block
+        float: left
+        margin: 1rem 1rem 0 0
+        +transition(all $anime-duration)
+      a:hover
+        color: $color-primary-2
+      a.view:before
+        +font-awesome("\f06e")
+      a.download:before
+        +font-awesome("\f019")
+
+    &:hover figcaption
+      +transform(translateY(0))
+
+    // overlay layer
+    &::before
+      content: ' '
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: transparent
+      +transition(background $anime-duration ease-out)
+    &:hover::before
+      background: rgba(0, 0, 0, .75)

@@ -1,0 +1,56 @@
+// ----------------
+// variables
+// ----------------
+
+// see http://codepen.io/markmurray/pen/JugrG/
+$colors: (facebook: #3b5998, twitter: #00a0d1, gplus: #db4a39, tumblr: #35465c, pinterest: #c8232c)
+$share-anime-duration: 0.2s
+
+// ----------------
+// mixins
+// ----------------
+
+=share-button($name)
+  .share-#{$name}
+    color: map-get($colors, $name)
+    border: 2px solid map-get($colors, $name)
+
+    &:hover
+      color: #fff
+      border-color: tint(map-get($colors, $name), 10)
+      background: tint(map-get($colors, $name), 10)
+    &:hover > i
+      +transition(all $share-anime-duration ease)
+      font-size: 1.5rem
+
+
+// ----------------
+// styles
+// ----------------
+
+.share-buttons
+  +leader(4)
+  text-align: center
+  +box-sizing(border-box)
+
+  a
+    display: inline-block
+    width: 3rem
+    height: 3rem
+    line-height: 3rem
+    font-size: 1rem
+    color: #fff
+    +transition(all $share-anime-duration ease)
+
+    &:not(:first-child)
+      margin-left: 1rem
+
+    i
+      vertical-align: middle
+      position: relative
+
+  +share-button(twitter)
+  +share-button(facebook)
+  +share-button(gplus)
+  +share-button(tumblr)
+  +share-button(pinterest)

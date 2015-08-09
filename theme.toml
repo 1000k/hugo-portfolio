@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "hugo-portfolio"
+license = "MIT"
+licenselink = "https://github.com/1000k/hugo-portfolio/blob/master/LICENSE.md"
+description = ""
+homepage = "http://blog.1000k.net/"
+tags = ["Hugo", "theme"]
+features = ["PureCSS", ""]
+min_version = 0.13
+
+[author]
+  name = "SENDA Keijiro"
+  homepage = "http://blog.1000k.net/"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

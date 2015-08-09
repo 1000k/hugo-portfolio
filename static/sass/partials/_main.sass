@@ -1,0 +1,102 @@
+// ----------------
+// variables
+// ----------------
+$navigation-width: 8rem
+$navigation-height: 4rem
+$navigation-anime-duration: .2s
+
+
+// ----------------
+// breakpoints
+// ----------------
+
++breakpoint($breakpoint-desktop)
+  #navigation
+    width: $navigation-width
+    height: 100%
+    position: fixed
+
+    li
+      display: block
+      height: 6rem
+      line-height: 6rem
+      font-size: 1.5rem
+    li:hover > a
+      padding-left: 1rem
+
+  #main
+    position: absolute
+    margin-left: $navigation-width
+    +calc(min-width, '100% - #{$navigation-width}')
+    +calc(max-width, '100% - #{$navigation-width}')
+    overflow-x: none
+
++breakpoint($breakpoint-mobile)
+  #navigation
+    display: flex
+    position: absolute
+    top: 0
+    width: 100%
+    height: $navigation-height
+    +flex(1 1 auto)
+    +flex-flow(row nowrap)
+    +justify-content(space-around)
+
+    li
+      display: inline-flex
+      height: $navigation-height
+      line-height: $navigation-height
+      font-size: 1rem
+      padding: 0 0.5rem
+
+  #main
+    margin: $navigation-height auto 0 auto
+
+
+// ----------------
+// styles
+// ----------------
+
+body
+  margin: auto
+  background: #eee
+  font-family: Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif
+
+#navigation
+  background: $color-primary-4
+  z-index: 1
+
+  li
+    font-family: 'Poiret One', cursive
+    +transition(background $navigation-anime-duration ease-out)
+  li:hover
+    background: $color-primary-2
+
+  a
+    color: #fff
+    text-decoration: none
+    +transition(all $navigation-anime-duration ease-out)
+
+
+#main
+  +box-sizing(border-box)
+
+  img
+    max-width: 100%
+
+  p
+    font-size: 1rem
+    +trailer(1)
+
+
+.homepage
+  width: 100%
+  background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed
+  +background-size(cover)
+  +table-centre-parent
+
+  h1
+    +table-centre-child
+    font-size: 4rem
+    font-family: 'Poiret One', cursive
+    color: #fff

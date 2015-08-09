@@ -1,0 +1,43 @@
+=font-awesome($unicode)
+  font-family: FontAwesome
+  content: $unicode
+  display: inline-block
+  vertical-align: middle
+  padding-right: .25rem
+
+// centering any div
+// @see http://stackoverflow.com/questions/23240114/how-to-vertically-center-a-div-with-sass-compass/23267046#23267046
+=centre($axis: "both")
+  position: absolute
+  @if $axis == "y"
+    top: 50%
+    +transform(translateY(-50%))
+  @if $axis == "x"
+    left: 50%
+    +transform(translateX(-50%))
+  @if $axis == "both"
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+
+=flex-centre
+  display: flex
+  +justify-content(center)
+  +align-content(center)
+  +align-items(center)
+
+=table-centre-parent
+  position: absolute
+  min-height: 100%
+  display: table
+
+=table-centre-child
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+
+// ref: https://coderwall.com/p/qac-og/sass-css3-calc-mixin
+=calc($property, $expression)
+  #{$property}: -moz-calc(#{$expression})
+  #{$property}: -webkit-calc(#{$expression})
+  #{$property}: calc(#{$expression})

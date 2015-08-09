@@ -1,0 +1,41 @@
+// ----------------
+// variables
+// ----------------
+$portrait-width: 400px
+
+
+// ----------------
+// breakpoints
+// ----------------
+
++breakpoint($breakpoint-desktop)
+  .about > article
+    +centre
+
+    p
+      width: $portrait-width
+
+
+// ----------------
+// styles
+// ----------------
+#main[class="about"]
+  +table-centre-parent
+
+  article
+    +table-centre-child
+
+    p
+      font-size: 1.5rem
+      line-height: 1.5rem
+      +trailer(1)
+
+      i
+        content: " "
+        vertical-align: middle
+
+    a
+      text-decoration: none
+      color: $color-primary-4
+    a:hover, a:active
+      color: $color-primary-2
