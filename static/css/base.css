@@ -86,8 +86,7 @@ body { margin: auto; background: #eee; font-family: Roboto, "Droid Sans", "æ¸¸ã‚
 #main[class="homepage"] { background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; position: absolute; min-height: 100%; display: table; }
 #main[class="homepage"] h1 { display: table-cell; vertical-align: middle; text-align: center; font-size: 4rem; font-family: "Poiret One", cursive; color: #fff; }
 
-@media (min-width: 37.5em) { .about > article { position: absolute; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-  .about > article p { width: 400px; } }
+@media (max-width: 37.5em) { #main[class="about"] { width: 100%; } }
 #main[class="about"] { position: absolute; min-height: 100%; display: table; }
 #main[class="about"] article { display: table-cell; vertical-align: middle; text-align: center; }
 #main[class="about"] article p { font-size: 1.5rem; line-height: 1.5rem; margin-bottom: 1.5em; }
@@ -97,6 +96,7 @@ body { margin: auto; background: #eee; font-family: Roboto, "Droid Sans", "æ¸¸ã‚
 
 #main[class="comic"] { position: absolute; min-height: 100%; display: table; }
 #main[class="comic"] article { display: table-cell; vertical-align: middle; text-align: center; }
+#main[class="comic"] article img { width: 100%; }
 #main[class="comic"] nav { margin-top: 1.5em; text-align: center; font-size: 4rem; }
 #main[class="comic"] nav a { text-decoration: none; color: #16A266; }
 #main[class="comic"] nav a:hover, #main[class="comic"] nav a:active { color: #7DDEB5; }
