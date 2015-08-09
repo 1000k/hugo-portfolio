@@ -4,7 +4,7 @@
   <figcaption>{{ if isset .Params "title" }}
     <h3>{{ .Get "title" }}</h3>{{ end }}
     {{ with .Get "link" }}<a href="{{ . }}" class="view">view</a>{{ end }}
-    {{ with .Get "pdf" }}<a href="{{ . }}" class="download">download</a>{{ end }}
+    {{ with .Get "pdf" }}<a href="/pdf/{{ . }}" class="download">download</a>{{ end }}
   </figcaption>
   {{ end }}
 </figure>
