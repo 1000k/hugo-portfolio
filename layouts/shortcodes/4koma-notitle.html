@@ -1,0 +1,3 @@
+<figure class="yonkoma yonkoma-notitle">
+    <img src="/img/{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
+</figure>

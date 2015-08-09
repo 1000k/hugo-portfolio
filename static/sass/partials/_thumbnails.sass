@@ -3,6 +3,35 @@
 // ----------------
 $anime-duration: .3s
 
+// overlay layer
+%thumbnail-overlay-caption
+  color: #fff
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  padding: 1rem
+  +transform(translateY(100%))
+  +transition(transform $anime-duration ease-in-out)
+
+%thumbnail-overlay-layer
+  overflow: hidden
+  position: relative
+
+  &::before
+    content: ' '
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: transparent
+    +transition(background $anime-duration ease-out)
+  &:hover::before
+    background: rgba(0, 0, 0, .75)
+
+
 // ----------------
 // breakpoints
 // ----------------
@@ -28,18 +57,24 @@ $anime-duration: .3s
   flex-wrap: wrap
 
   h2
+    @extend %thumbnail-overlay-layer
     background: $color-secondary-2-4
     color: #fff
     display: flex
     +flex-centre
 
+    &:hover p
+      +transform(translateY(0))
+    p
+      @extend %thumbnail-overlay-caption
+
   figure
-    overflow: hidden
-    position: relative
+    @extend %thumbnail-overlay-layer
 
     box-sizing: border-box
     height: 12rem
     background: #888
+
 
     img
       // fill image inside box
@@ -50,15 +85,7 @@ $anime-duration: .3s
       z-index: 1
 
     figcaption
-      color: #fff
-      position: absolute
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
-      padding: 1rem
-      +transform(translateY(100%))
-      +transition(transform $anime-duration ease-in-out)
+      @extend %thumbnail-overlay-caption
 
       h3
         font-size: 1.5rem
@@ -80,15 +107,3 @@ $anime-duration: .3s
     &:hover figcaption
       +transform(translateY(0))
 
-    // overlay layer
-    &::before
-      content: ' '
-      position: absolute
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
-      background: transparent
-      +transition(background $anime-duration ease-out)
-    &:hover::before
-      background: rgba(0, 0, 0, .75)

@@ -1,0 +1,38 @@
+// ----------------
+// variables
+// ----------------
+
+// ----------------
+// breakpoints
+// ----------------
+
++breakpoint($breakpoint-desktop)
+  #main[class="homepage"]
+    height: 100%
+
+    h1
+      +table-centre-child
+
++breakpoint($breakpoint-mobile)
+  #main[class="homepage"]
+    +calc(height, '100% - #{$navigation-height}')
+    width: 100%
+    margin-top: 0
+
+    h1
+      +calc(height, '100% - #{$navigation-height}')
+
+
+// ----------------
+// styles
+// ----------------
+#main[class="homepage"]
+  background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed
+  +background-size(cover)
+  +table-centre-parent
+
+  h1
+    +table-centre-child
+    font-size: 4rem
+    font-family: 'Poiret One', cursive
+    color: #fff
