@@ -1,11 +1,9 @@
 {{ template "theme/partials/header.html" . }}
 
-<section id="main" role="main" class="comic">
-  <article>
-    {{ .Content }}
-    {{ template "theme/partials/share.html" . }}
-    <nav><a href="{{ .Site.BaseURL }}works/" title="back to gallery"><i class="fa fa-chevron-up"></i></a></nav>
-  </article>
-</section>
+<article class="comic">
+  {{ .Content }}
+  {{ template "theme/partials/share.html" . }}
+  <nav><a href="{{ .Site.BaseURL }}works/" title="back to gallery"><i class="fa fa-chevron-up"></i></a></nav>
+</article>
 
 {{ template "theme/partials/footer.html" . }}

@@ -7,14 +7,14 @@
 // ----------------
 
 +breakpoint($breakpoint-desktop)
-  #main[class="homepage"]
+  #main > .homepage
     height: 100%
 
     h1
       +table-centre-child
 
 +breakpoint($breakpoint-mobile)
-  #main[class="homepage"]
+  #main > .homepage
     +calc(height, '100% - #{$navigation-height}')
     width: 100%
     margin-top: 0
@@ -26,7 +26,7 @@
 // ----------------
 // styles
 // ----------------
-#main[class="homepage"]
+#main > .homepage
   background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed
   +background-size(cover)
   +table-centre-parent

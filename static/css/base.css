@@ -76,29 +76,29 @@ body { margin: auto; background: #eee; font-family: Roboto, "Droid Sans", "æ¸¸ã‚
 #navigation a { color: #fff; text-decoration: none; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -webkit-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
 
 #main { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-#main img { max-width: 100%; }
 #main p { font-size: 1rem; margin-bottom: 1.5em; }
 
-@media (min-width: 37.5em) { #main[class="homepage"] { height: 100%; }
-  #main[class="homepage"] h1 { display: table-cell; vertical-align: middle; text-align: center; } }
-@media (max-width: 37.5em) { #main[class="homepage"] { height: -moz-calc(100% - 4rem); height: -webkit-calc(100% - 4rem); height: calc(100% - 4rem); width: 100%; margin-top: 0; }
-  #main[class="homepage"] h1 { height: -moz-calc(100% - 4rem); height: -webkit-calc(100% - 4rem); height: calc(100% - 4rem); } }
-#main[class="homepage"] { background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; position: absolute; min-height: 100%; display: table; }
-#main[class="homepage"] h1 { display: table-cell; vertical-align: middle; text-align: center; font-size: 4rem; font-family: "Poiret One", cursive; color: #fff; }
+img { max-width: 100%; height: auto; }
 
-@media (max-width: 37.5em) { #main[class="about"] { width: 100%; } }
-#main[class="about"] { position: absolute; min-height: 100%; display: table; }
-#main[class="about"] article { display: table-cell; vertical-align: middle; text-align: center; }
-#main[class="about"] article p { font-size: 1.5rem; line-height: 1.5rem; margin-bottom: 1.5em; }
-#main[class="about"] article p i { content: " "; vertical-align: middle; }
-#main[class="about"] article a { text-decoration: none; color: #16A266; }
-#main[class="about"] article a:hover, #main[class="about"] article a:active { color: #7DDEB5; }
+@media (min-width: 37.5em) { #main > .homepage { height: 100%; }
+  #main > .homepage h1 { display: table-cell; vertical-align: middle; text-align: center; } }
+@media (max-width: 37.5em) { #main > .homepage { height: -moz-calc(100% - 4rem); height: -webkit-calc(100% - 4rem); height: calc(100% - 4rem); width: 100%; margin-top: 0; }
+  #main > .homepage h1 { height: -moz-calc(100% - 4rem); height: -webkit-calc(100% - 4rem); height: calc(100% - 4rem); } }
+#main > .homepage { background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; position: absolute; min-height: 100%; display: table; }
+#main > .homepage h1 { display: table-cell; vertical-align: middle; text-align: center; font-size: 4rem; font-family: "Poiret One", cursive; color: #fff; }
 
-#main[class="comic"] { position: absolute; min-height: 100%; display: table; }
-#main[class="comic"] article { display: table-cell; vertical-align: middle; text-align: center; }
-#main[class="comic"] nav { margin-top: 1.5em; text-align: center; font-size: 4rem; }
-#main[class="comic"] nav a { text-decoration: none; color: #16A266; }
-#main[class="comic"] nav a:hover, #main[class="comic"] nav a:active { color: #7DDEB5; }
-#main[class="comic"] figure { margin-bottom: 3em; }
-#main[class="comic"] .yonkoma h3 { font-size: 2rem; font-weight: 600; margin-top: 1.5em; margin-bottom: 1.5em; }
-#main[class="comic"] .yonkoma-notitle { margin-bottom: 9em; }
+@media (max-width: 37.5em) { #main > .about { width: 100%; } }
+#main > .about { position: absolute; min-height: 100%; display: table; }
+#main > .about article { display: table-cell; vertical-align: middle; text-align: center; }
+#main > .about article p { font-size: 1.5rem; line-height: 1.5rem; margin-bottom: 1.5em; }
+#main > .about article p i { content: " "; vertical-align: middle; }
+#main > .about article a { text-decoration: none; color: #16A266; }
+#main > .about article a:hover, #main > .about article a:active { color: #7DDEB5; }
+
+#main > .comic { text-align: center; }
+#main > .comic nav { margin-top: 1.5em; text-align: center; font-size: 4rem; }
+#main > .comic nav a { text-decoration: none; color: #16A266; }
+#main > .comic nav a:hover, #main > .comic nav a:active { color: #7DDEB5; }
+#main > .comic figure { margin-bottom: 3em; }
+#main > .comic .yonkoma h3 { font-size: 2rem; font-weight: 600; margin-top: 1.5em; margin-bottom: 1.5em; }
+#main > .comic .yonkoma-notitle { margin-bottom: 9em; }
