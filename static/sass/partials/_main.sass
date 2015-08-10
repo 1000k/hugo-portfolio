@@ -29,7 +29,6 @@ $navigation-anime-duration: .2s
     margin-left: $navigation-width
     +calc(min-width, '100% - #{$navigation-width}')
     +calc(max-width, '100% - #{$navigation-width}')
-    overflow-x: none
 
 +breakpoint($breakpoint-mobile)
   #navigation
@@ -62,6 +61,15 @@ body
   background: #eee
   font-family: Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif
 
+p
+  font-size: 1rem
+  +trailer(1)
+
+img
+  max-width: 100%
+  height: auto
+
+
 #navigation
   background: $color-primary-4
   z-index: 1
@@ -80,11 +88,3 @@ body
 
 #main
   +box-sizing(border-box)
-
-  p
-    font-size: 1rem
-    +trailer(1)
-
-img
-  max-width: 100%
-  height: auto

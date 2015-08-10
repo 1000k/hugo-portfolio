@@ -9,30 +9,28 @@ $portrait-width: 400px
 // ----------------
 
 +breakpoint($breakpoint-mobile)
-  #main > .about
+  .about
     width: 100%
 
 
 // ----------------
 // styles
 // ----------------
-#main > .about
-  +table-centre-parent
+.about
+  +flex-centre
+  flex-flow: column
 
-  article
-    +table-centre-child
+  p
+    font-size: 1.5rem
+    line-height: 1.5rem
+    +trailer(1.5)
 
-    p
-      font-size: 1.5rem
-      line-height: 1.5rem
-      +trailer(1)
+    i
+      content: " "
+      vertical-align: middle
 
-      i
-        content: " "
-        vertical-align: middle
-
-    a
-      text-decoration: none
-      color: $color-primary-4
-    a:hover, a:active
-      color: $color-primary-2
+  a
+    text-decoration: none
+    color: $color-primary-4
+  a:hover, a:active
+    color: $color-primary-2
