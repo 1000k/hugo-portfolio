@@ -79,14 +79,13 @@ img { max-width: 100%; height: auto; }
 #navigation li:hover { background: #7DDEB5; }
 #navigation a { color: #fff; text-decoration: none; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -webkit-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
 
-#main { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+#main { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; height: 100%; }
 
-@media (min-width: 37.5em) { #main > .homepage { height: 100%; }
-  #main > .homepage h1 { display: table-cell; vertical-align: middle; text-align: center; } }
-@media (max-width: 37.5em) { #main > .homepage { height: -moz-calc(100% - 4rem); height: -webkit-calc(100% - 4rem); height: calc(100% - 4rem); width: 100%; margin-top: 0; }
-  #main > .homepage h1 { height: -moz-calc(100% - 4rem); height: -webkit-calc(100% - 4rem); height: calc(100% - 4rem); } }
-#main > .homepage { background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; position: absolute; min-height: 100%; display: table; }
-#main > .homepage h1 { display: table-cell; vertical-align: middle; text-align: center; font-size: 4rem; font-family: "Poiret One", cursive; color: #fff; }
+@media (min-width: 37.5em) { .homepage { height: 100%; }
+  .homepage h1 { display: table-cell; vertical-align: middle; text-align: center; } }
+@media (max-width: 37.5em) { .homepage { width: 100%; height: -moz-calc(100% - 4rem); height: -webkit-calc(100% - 4rem); height: calc(100% - 4rem); } }
+.homepage { background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-content: center; align-content: center; -webkit-align-items: center; align-items: center; position: absolute; width: 100%; }
+.homepage h1 { font-size: 4rem; font-family: "Poiret One", cursive; color: #fff; }
 
 @media (max-width: 37.5em) { .about { width: 100%; } }
 .about { display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-content: center; align-content: center; -webkit-align-items: center; align-items: center; flex-flow: column; }

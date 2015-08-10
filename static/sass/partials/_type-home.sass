@@ -7,32 +7,29 @@
 // ----------------
 
 +breakpoint($breakpoint-desktop)
-  #main > .homepage
+  .homepage
     height: 100%
 
     h1
       +table-centre-child
 
 +breakpoint($breakpoint-mobile)
-  #main > .homepage
-    +calc(height, '100% - #{$navigation-height}')
+  .homepage
     width: 100%
-    margin-top: 0
-
-    h1
-      +calc(height, '100% - #{$navigation-height}')
+    +calc(height, "100% - #{$navigation-height}")
 
 
 // ----------------
 // styles
 // ----------------
-#main > .homepage
+.homepage
   background: #9cc url(../img/muratagawa_bg_1500x500.jpg) no-repeat center center fixed
   +background-size(cover)
-  +table-centre-parent
+  +flex-centre
+  position: absolute
+  width: 100%
 
   h1
-    +table-centre-child
     font-size: 4rem
     font-family: 'Poiret One', cursive
     color: #fff
