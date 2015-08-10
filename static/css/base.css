@@ -96,7 +96,6 @@ body { margin: auto; background: #eee; font-family: Roboto, "Droid Sans", "æ¸¸ã‚
 
 #main[class="comic"] { position: absolute; min-height: 100%; display: table; }
 #main[class="comic"] article { display: table-cell; vertical-align: middle; text-align: center; }
-#main[class="comic"] article img { width: 100%; }
 #main[class="comic"] nav { margin-top: 1.5em; text-align: center; font-size: 4rem; }
 #main[class="comic"] nav a { text-decoration: none; color: #16A266; }
 #main[class="comic"] nav a:hover, #main[class="comic"] nav a:active { color: #7DDEB5; }
