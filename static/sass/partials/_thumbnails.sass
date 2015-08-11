@@ -12,6 +12,7 @@ $anime-duration: .3s
   +stretch
   +transform(translateY(100%))
   +transition(transform $anime-duration ease-in-out)
+  z-index: 10001  // this must be greater then overlay layer
 
 %thumbnail-overlay-layer
   overflow: hidden
@@ -23,6 +24,7 @@ $anime-duration: .3s
     +stretch
     +transition(background $anime-duration ease-out)
   &:hover::before
+    z-index: 10000
     background: rgba(0, 0, 0, .75)
 
 
@@ -46,15 +48,14 @@ $anime-duration: .3s
 // styles
 // ----------------
 .thumbnails
-  display: flex
-  flex-flow: row
-  flex-wrap: wrap
+  +display-flex
+  +flex-flow(row wrap)
 
   h2
     @extend %thumbnail-overlay-layer
     background: $color-secondary-2-4
     color: #fff
-    display: flex
+    +display-flex
     +flex-centre
 
     &:hover p
