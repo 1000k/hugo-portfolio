@@ -1,3 +1,5 @@
+@import "compass/layout/stretching"
+
 // ----------------
 // variables
 // ----------------
@@ -6,12 +8,8 @@ $anime-duration: .3s
 // overlay layer
 %thumbnail-overlay-caption
   color: #fff
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
   padding: 1rem
+  +stretch
   +transform(translateY(100%))
   +transition(transform $anime-duration ease-in-out)
 
@@ -21,12 +19,8 @@ $anime-duration: .3s
 
   &::before
     content: ' '
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
     background: transparent
+    +stretch
     +transition(background $anime-duration ease-out)
   &:hover::before
     background: rgba(0, 0, 0, .75)
@@ -81,7 +75,6 @@ $anime-duration: .3s
       height: 12rem
       object-position: 50% 50%
       object-fit: cover
-      z-index: 1
 
     figcaption
       @extend %thumbnail-overlay-caption
