@@ -4,7 +4,7 @@
 name = "hugo-portfolio"
 license = "MIT"
 licenselink = "https://github.com/1000k/hugo-portfolio/blob/master/LICENSE.md"
-description = ""
+description = "This theme is created by SENDA Keijiro"
 homepage = "http://blog.1000k.net/"
 tags = ["Hugo", "theme"]
 features = ["PureCSS", ""]
@@ -12,7 +12,7 @@ min_version = 0.13
 
 [author]
   name = "SENDA Keijiro"
-  homepage = "http://blog.1000k.net/"
+  homepage = "http://1000k.github.io/"
 
 # If porting an existing theme
 [original]

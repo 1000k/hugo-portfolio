@@ -5,6 +5,7 @@
   <title>{{ .Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{ if .Site.Params.author }}<meta name="author" content="{{ .Site.Params.author }}">{{ end }}
   {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
   {{ .Hugo.Generator }}
   <link rel="icon" href="{{ .Site.BaseURL }}/favicon.png">
