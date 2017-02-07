@@ -6,4 +6,6 @@
   {{ template "theme/partials/works_navi.html" . }}
 </article>
 
+{{ if eq .Site.Params.json_ld_enabled true }}{{ partial "json_ld.html" . }}{{ end }}
+
 {{ template "theme/partials/footer.html" . }}

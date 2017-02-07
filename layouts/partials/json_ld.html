@@ -1,0 +1,25 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ .Title }},
+  "url": {{ .Permalink }},
+  "dateModified": "{{ .Lastmod.Format "2006-01-02 03:04:05" }}",
+  "datePublished": "{{ .Date.Format "2006-01-02 03:04:05" }}",
+  "mainEntityOfPage": {{ .Permalink }},
+  "inLanguage": {{ .Site.LanguageCode }},
+  "image": {
+    "@type": "ImageObject",
+    {{ if and (.Params.image) (ne .Params.image "") }}
+    "url": {{ .Params.image | absURL }},
+    "width": {{ .Params.imagewidth }},
+    "height": {{ .Params.imageheight }},
+    "genre": {{ .Params.genre }}
+    {{ else }}
+    "@id": {{ .Permalink }}
+    {{ end }}
+  },
+  "author": { "@id": {{ .Site.Params.author }} },
+  "publisher": { "@id": {{ .Site.Params.author }} }
+}
+</script>
