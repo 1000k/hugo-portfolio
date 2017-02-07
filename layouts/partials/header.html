@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>{{ .Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ printf "%s | %s"  .Title .Site.Params.description }}{{ end }}">
   {{ if .Site.Params.author }}<meta name="author" content="{{ .Site.Params.author }}">{{ end }}
   {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
   {{ .Hugo.Generator }}
   <link rel="icon" href="{{ .Site.BaseURL }}/favicon.png">
-  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   <link href="{{ .Site.BaseURL }}css/font-awesome.min.css" rel="stylesheet">
   <link href="{{ .Site.BaseURL }}css/base.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
